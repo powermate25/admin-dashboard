@@ -4,10 +4,11 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    min-height: fit-content;
+    /* min-height: fit-content; */
     min-height: 600px;
     display: grid;
-    background-color: rgb(230, 228, 221);
+    min-width: fit-content;
+    /* background-color: rgb(230, 228, 221); */
 }
 
 div {
@@ -76,10 +77,10 @@ div {
 
 .project {
     background-color: #ffffff;
-    
     border-left: 15px solid orange;
     border-radius: 8px; 
     height: min(10rem, fit-content);
+    padding: 1rem;
 }
 
 .box-title {
@@ -88,7 +89,7 @@ div {
 }
 
 .right-side-container {
-    background-color: rgb(171, 194, 0); 
+   /*  background-color: rgb(171, 194, 0);  */
     /* justify-self: center; */
     /* display: grid; */
     display: flex;
@@ -103,7 +104,7 @@ div {
 }
 
 .article-div, .trending-div {
-    background-color:  #0066ff;
+    /* background-color:  #0066ff; */
     display: grid;
     width: 90%;
     justify-self: center;
@@ -168,6 +169,9 @@ div {
 
 .header-search-box input {
     width: 30rem;
+    border-radius: 6px;
+    border: none;
+    background-color:#e2e8f0 ;
 }
 
 
