@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: fit-content;
+    min-height: 600px;
+    display: grid;
+    background-color: rgb(230, 228, 221);
+}
+
+div {
+    /* border: 1px solid hsl(0, 29%, 48%); */
+    border-width: 1PX;
+
+}
+
+
+/* Design blow */
+
+/* Main Grid Layout */
+
+
+.main-container {
+    /* background-color: antiquewhite; */
+    justify-self: center;
+    width: clamp(960px, 100%, 1920px); 
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: #1992d4;
+}
+
+.header {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr;
+    width: 100%;
+    height: fit-content;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.prime-container {
+    background-color: #e2e8f0;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+/* Inner grid layout below */
+
+.left-project-container {
+   /*  border: 1px solid blue; */
+    justify-self: center;
+    display: grid;
+    width: 60%;
+    height: 90%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project {
+    background-color: #ffffff;
+    
+    border-left: 15px solid orange;
+    border-radius: 8px; 
+    height: min(10rem, fit-content);
+}
+
+.box-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.right-side-container {
+    /* background-color: rgb(171, 194, 0);  */
+    /* justify-self: center; */
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    /* grid-template-columns: 1 / 2;
+    grid-template-rows: 1fr 1fr; */
+    /* gap: 1rem; */
+}
+
+.article-box {
+    /* border: 3px solid #0066ff; */
+    display: grid;
+    width: 90%;
+    justify-self: center;
+    height: 70%; 
+    grid-template-columns: 1 / 1;
+    grid-template-rows: 2rem 1fr;
+    gap: 1rem;
+    height: fit-content;
+    
+}
+
+.article-box div {
+   /*  border: 1px solid red; */
+}
+
+.article {
+    /* background-color: rgb(196, 34, 34); */
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 80%;
+}
+
+.article :nth-child(2n +3) {
+    border-top: 0.2rem solid oklch(80% 0 150);
+    margin-top: 1rem;
+}
+
+/* Header menu design */
+
+.header-row-1 {
+    grid-row: 1 / 2;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    height: 3rem;
+
+}
+
+.header-search-box {
+    display: flex;
+
+}
+
+.header-search-box label {
+    display: flex;
+    width: 3rem;
+    
+}
+
+.header-search-box input {
+    width: 30rem;
+}
+
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.header-notification-box {
+   width: 3rem;
+}
+
+/* Header row 2 */
+
+.header-row-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+
+.welcome-box {
+    display: flex;
+    justify-content: start ;
+    align-items: center;
+    gap: 2rem;
+}
+
+.action-box {
+    display: flex;
+    width: 20rem;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.action-box button {
+    width: 6rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #0066ff;
+}
+
+/* Side menu design */
+
+ul > li {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+/* Right-container design */
+
+.Trend-container {
+    /* border: 1px solid blue; */
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.Trend-container .trend-row:nth-child(n +2) {
+    border-top: 0.2rem solid oklch(80% 0 150);
+    margin-top: 1rem;
+}
+
+.trend-avatar {
+    /* border: 1px solid blue; */
+    width: 3rem;
+    height: 3rem;
+    /* width: 10%;
+    height: 10%; */
+    border-radius: 50%; 
+}
+
+p, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.trend-row div {
+    /* border: 1px solid blue; */
+}
+
+.trend-row {
+    /* border: 1px solid rgb(240, 0, 220); */
+    display: flex;
+    justify-content: start ;
+    align-items: center;
+    gap: 2rem;
+    font-size: 80%;
+    height: 10%;
+}
+
+.trend-details {
+    width: 70%;
+}
