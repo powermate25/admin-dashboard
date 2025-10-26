@@ -26,7 +26,7 @@ div {
     /* background-color: antiquewhite; */
     justify-self: center;
     width: clamp(960px, 100%, 1920px); 
-    min-height: 700px;
+    min-height: 900px;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -88,7 +88,7 @@ div {
 }
 
 .right-side-container {
-    /* background-color: rgb(171, 194, 0);  */
+    background-color: rgb(171, 194, 0); 
     /* justify-self: center; */
     /* display: grid; */
     display: flex;
@@ -96,37 +96,49 @@ div {
     align-items: center;
     width: 40%;
     height: 90%;
+    gap: 3rem;
     /* grid-template-columns: 1 / 2;
     grid-template-rows: 1fr 1fr; */
     /* gap: 1rem; */
 }
 
-.article-box {
-    /* border: 3px solid #0066ff; */
+.article-div, .trending-div {
+    background-color:  #0066ff;
     display: grid;
     width: 90%;
     justify-self: center;
     height: 70%; 
     grid-template-columns: 1 / 1;
     grid-template-rows: 2rem 1fr;
-    gap: 1rem;
+    gap: 2rem;
     height: fit-content;
     
 }
 
-.article-box div {
+.article-div div {
    /*  border: 1px solid red; */
 }
 
-.article {
+.article, .Trend-container {
     /* background-color: rgb(196, 34, 34); */
     background-color: #ffffff;
     border-radius: 8px;
     font-size: 80%;
+    padding: 1rem;
+    height: fit-content;
 }
 
+/* .Trend-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: fit-content;
+    font-size: 80%;
+    padding: 1rem;
+    
+} */
+
 .article :nth-child(2n +3) {
-    border-top: 0.2rem solid oklch(80% 0 150);
+    border-top: 0.1rem solid oklch(80% 0 150);
     margin-top: 1rem;
 }
 
@@ -196,7 +208,8 @@ div {
     width: 20rem;
     height: fit-content;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    
 }
 
 .action-box button {
@@ -218,16 +231,15 @@ ul > li {
 
 /* Right-container design */
 
-.Trend-container {
-    /* border: 1px solid blue; */
-    background-color: #ffffff;
-    border-radius: 8px;
-    height: fit-content;
+.trending-div {
+    height: 100%; 
 }
 
+
+
 .Trend-container .trend-row:nth-child(n +2) {
-    border-top: 0.2rem solid oklch(80% 0 150);
-    margin-top: 1rem;
+    border-top: 0.1rem solid oklch(80% 0 150);
+    
 }
 
 .trend-avatar {
@@ -253,11 +265,17 @@ p, h2, h3, h4 {
     display: flex;
     justify-content: start ;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 80%;
     height: 10%;
+    padding: 0rem;
 }
 
 .trend-details {
     width: 70%;
+}
+
+.box-title-3 {
+   /*  border: 1px solid blue; */
+
 }
