@@ -21,11 +21,12 @@
 .white {
     --header-bg-color: #ffffff;
     --white-bg-color: #ffffff;
-    --sidebar-bg-color: #1992d4;
+    --sidebar-bg-color: oklch(59.333% 0.14503 243.555);
     --prime-container-color: #e2e8f0;
     --search-box-input: #e2e8f0;
-    --search-box--put-hover: #0085cd;
-    --button-color: #0085cd;
+    --search-box--put-hover: oklch(59.333% 0.14503 243.555);
+    --button-color: oklch(59.333% 0.14503 243.555);
+    --button-color-hover: oklch(45% 0.14503 243.555);
     --primary-font-color: "";
     --secondary--font-color: "";
     --sidebar-font-color: "";
@@ -43,8 +44,9 @@
     --sidebar-bg-color: oklch(12.9% 0.042 264.695);
     --prime-container-color: oklch(12.9% 0.042 264.695);
     --search-box-input: oklch(55.4% 0.046 257.417);
-    --search-box--put-hover: oklch(76.5% 0.177 163.223);
+    --search-box--put-hover: oklch(63.7% 0.237 25.331);
     --button-color: oklch(63.7% 0.237 25.331);
+    --button-color-hover: oklch(45.7% 0.237 25.331);
     --primary-font-color: "";
     --secondary--font-color: "";
     --sidebar-font-color: "";
@@ -117,6 +119,7 @@ body {
     padding: 0 0 2rem 1rem;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr;
+    margin: 2rem 0 0 0 ;
     
 }
 
@@ -152,6 +155,12 @@ body {
     box-shadow: 1px 2px 4px oklch(75% 1% 120 / 50%);
 }
 
+.project:hover, .content-wrapper:hover {
+    cursor: pointer;
+    border-width: 15px;
+    box-shadow: 1px 2px 4px oklch(75% 1% 120 / 50%);  
+    border-radius: 8px; 
+}
 
 .box-title {
     grid-column: 1 / 3;
@@ -270,7 +279,7 @@ body {
     height: 2rem;
     border-radius: 15px;
     outline: none;
-    border: 1px solid var(--search-box--put-hover);
+    border: 1.5px solid var(--search-box--put-hover); 
     background-color:var(--search-box-input);
     box-shadow: 1px 2px 4px oklch(75% 1% 120 / 50%);
 }
@@ -280,10 +289,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15rem;
+    width: 18rem;
     height: 3rem;
     gap: 1rem;
     font-size: 1rem;
+    /* border: 1px solid red; */
+    padding: 0 1rem;
 }
 
 .header-notification-box {
@@ -331,6 +342,9 @@ body {
     background-color: var(--button-color);
     border: 1px solid var(--button-color) ;
     color: var(--primary-white);
+}
+.action-box button:hover {
+    background-color: var(--button-color-hover);
 }
 
 /* Side menu design */

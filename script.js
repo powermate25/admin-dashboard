@@ -2,7 +2,7 @@ console.log("Hello World")
 
 const root = document.documentElement
 const toggleBtn = document.querySelector(".toggle")
-root.className = "white"
+
 
 const icon = document.querySelectorAll(".mini-icon")
 const label = document.querySelector(`.dynamic-icon`)
@@ -19,6 +19,7 @@ function themeLight(){
     root.className = "white"
 }
 
+
 toggleBtn.addEventListener(
     "click", () => {
         console.log("previous state was: " + root.className)
@@ -30,6 +31,7 @@ toggleBtn.addEventListener(
         if (root.className === "dark"){
         label.setAttribute("src", "./images/icons/magnify-white.svg")
         bell.setAttribute("src", "./images/icons/bell-white.svg")
+        toggleBtn.setAttribute("src", "./images/icons/theme/sun-fill.svg")
         const icon = document.querySelectorAll(".mini-icon")
         icon.forEach(i => i.style.cssText = `background-color: hsla(0, 0%, 95%, 1.00); border-radius: 50%;`)
         /* console.log(bell)
@@ -38,6 +40,7 @@ toggleBtn.addEventListener(
         } else {
             label.setAttribute("src", "./images/icons/magnify.svg")
             bell.setAttribute("src", "./images/icons/bell-ring.svg")
+            toggleBtn.setAttribute("src", "./images/icons/theme/moon-stars-fill.svg")
             const icon = document.querySelectorAll(".mini-icon")
             icon.forEach(i => i.style.cssText = `background-color: hsla(0, 0%, 95%, 1.00); border-radius: 50%;`)
             /* console.log(bell)
