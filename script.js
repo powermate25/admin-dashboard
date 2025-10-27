@@ -48,7 +48,7 @@ function initializeTheme() {
         dashboard.setAttribute("src", "./images/icons/dashboard-dark.svg")
         toggleBtn.setAttribute("src", "./images/icons/theme/sun-fill.svg")
         const icon = document.querySelectorAll(".mini-icon")
-        icon.forEach(i => i.style.cssText = `background-color: hsla(0, 0%, 95%, 1.00); border-radius: 50%;`)
+        icon.forEach(i => i.style.cssText = `border: 3px solid hsla(0, 0%, 95%, 1.00); background-color: hsla(0, 0%, 95%, 1.00); border-radius: 50%;`)
         
         } else {
             label.setAttribute("src", "./images/icons/magnify.svg")
@@ -56,7 +56,7 @@ function initializeTheme() {
             dashboard.setAttribute("src", "./images/icons/dashboard.svg")
             toggleBtn.setAttribute("src", "./images/icons/theme/moon-stars-fill.svg")
             const icon = document.querySelectorAll(".mini-icon")
-            icon.forEach(i => i.style.cssText = `background-color: hsla(0, 0%, 95%, 1.00); border-radius: 50%;`)
+            icon.forEach(i => i.style.cssText = `border-radius: 50%;`)
               }
 
 }
