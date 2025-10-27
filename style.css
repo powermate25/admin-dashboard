@@ -138,22 +138,33 @@ body {
 .project-div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr); */
     gap: 1rem;
+    
+}
+
+.project-grid { 
+    width: min(100%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr) );
+    grid-auto-rows: repeat(auto-fit); 
+    gap: 2rem;
 }
 
 .project {
     background-color: var(--white-bg-color);
     border-left: 10px solid var(--left-border-color);
-    border-radius: 8px; 
+    border-radius: 8px;
     height: 15rem /* min(10rem, fit-content) */;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-width: 1px 1px 1px 10px;
     box-shadow: 1px 2px 4px oklch(75% 1% 120 / 50%);
+    font-size: min(0.9rem);  
+    
 }
 
 .project:hover, .content-wrapper:hover {
